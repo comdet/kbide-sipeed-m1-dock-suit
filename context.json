@@ -1,0 +1,10 @@
+{	
+  "mcu" : "K210",
+  "arch" : "RISC-V",
+  "baudrate" : 2000000,
+  "cpu_clock" : "400000000L",
+  "cflags": [
+    "-I\"{board}/include\""
+  ],
+  "libflags" : [ ]
+}
