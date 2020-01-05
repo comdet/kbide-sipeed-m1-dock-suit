@@ -1,5 +1,5 @@
-#ifndef _VARIANT_IOXGD4
-#define _VARIANT_IOXGD4
+#ifndef _VARIANT_SIPEED_M1_DOCK
+#define _VARIANT_SIPEED_M1_DOCK
 
 #include <stdint.h>
 
@@ -62,8 +62,8 @@ extern class UARTClass Serial3;
 #define RX1                   6
 #define TX1                   7
 
-#define SDA                  33
-#define SCL                  32
+#define SDA                  31
+#define SCL                  30
 
 #define MD_PIN_MAP(fpio)   (fpio)
 #define ORG_PIN_MAP(org_pin)    (org_pin)
