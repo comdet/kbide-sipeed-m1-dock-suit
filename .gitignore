@@ -1,0 +1,4 @@
+build/*.bin
+build/*.elf
+build/*.cpp
+build/*.o
