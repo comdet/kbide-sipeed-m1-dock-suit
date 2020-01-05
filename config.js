@@ -6,7 +6,7 @@ module.exports = {
   author: "Sonthaya Nongnuch",
   website: "https://www.ioxhop.com/",
   email: "max30012540@hotmail.com",
-  git: "https://github.com/ioxhop/kbide-sipeed-m1-dock-suit",
+  git: "https://github.com/ioxhop/kbide-sipeed-m1-dock-suit/",
   image: "/static/display.png",
   version: "1.0.0"
 };
