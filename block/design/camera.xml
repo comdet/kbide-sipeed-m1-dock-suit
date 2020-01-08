@@ -1,0 +1,420 @@
+<xml xmlns="https://developers.google.com/blockly/xml"><block type="factory_base" id="q;N[v?,a*h6SZ+Rxm35~" deletable="false" movable="false" x="10" y="10">
+    <mutation connections="BOTH"/>
+    <field name="NAME">sipeed_ov2640_init</field>
+    <field name="INLINE">AUTO</field>
+    <field name="CONNECTIONS">BOTH</field>
+    <statement name="INPUTS">
+      <block type="input_dummy" id="|dzCRYBUkK}^/{LbND:~">
+        <field name="ALIGN">LEFT</field>
+        <statement name="FIELDS">
+          <block type="field_static" id="$OpS?jo_Yj=T5nQNYeG;">
+            <field name="TEXT">OV2640 init, frame size</field>
+            <next>
+              <block type="field_dropdown" id="jc0#ST(c8o5f-pVkZyg_">
+                <mutation options="[&quot;text&quot;,&quot;text&quot;,&quot;text&quot;,&quot;text&quot;,&quot;text&quot;]"/>
+                <field name="FIELDNAME">img_size</field>
+                <field name="USER0">640x480</field>
+                <field name="CPU0">FRAMESIZE_VGA</field>
+                <field name="USER1">320x240</field>
+                <field name="CPU1">FRAMESIZE_QVGA</field>
+                <field name="USER2">160x120</field>
+                <field name="CPU2">FRAMESIZE_QQVGA</field>
+                <field name="USER3">80x60</field>
+                <field name="CPU3">FRAMESIZE_QQQVGA</field>
+                <field name="USER4">40x30</field>
+                <field name="CPU4">FRAMESIZE_QQQQVGA</field>
+                <next>
+                  <block type="field_static" id="HMLg{|5Zc:8VdtuK^|u0">
+                    <field name="TEXT">format</field>
+                    <next>
+                      <block type="field_dropdown" id="YO?f=,i*2h[A/0+Bkl(@">
+                        <mutation options="[&quot;text&quot;,&quot;text&quot;,&quot;text&quot;,&quot;text&quot;,&quot;text&quot;]"/>
+                        <field name="FIELDNAME">pix_format</field>
+                        <field name="USER0">RGB565</field>
+                        <field name="CPU0">PIXFORMAT_RGB565</field>
+                        <field name="USER1">RAW</field>
+                        <field name="CPU1">PIXFORMAT_BAYER</field>
+                        <field name="USER2">YUV422</field>
+                        <field name="CPU2">PIXFORMAT_YUV422</field>
+                        <field name="USER3">GRAYSCALE</field>
+                        <field name="CPU3">PIXFORMAT_GRAYSCALE</field>
+                        <field name="USER4">JPEG/COMPRESSED</field>
+                        <field name="CPU4">PIXFORMAT_JPEG</field>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </statement>
+      </block>
+    </statement>
+    <value name="TOOLTIP">
+      <block type="text" id="]_ZPi}oWlA?,})N,.znX" deletable="false" movable="false">
+        <field name="TEXT">initial camera</field>
+      </block>
+    </value>
+    <value name="HELPURL">
+      <block type="text" id="Dk8mik+Q}t0dS/rQDnOe" deletable="false" movable="false">
+        <field name="TEXT"/>
+      </block>
+    </value>
+    <value name="TOPTYPE">
+      <shadow type="type_null" id="zGF)nNb2K_P[;W-HY2m8"/>
+    </value>
+    <value name="BOTTOMTYPE">
+      <shadow type="type_null" id="@$w^[T_B4QV6z:bXM+tt"/>
+    </value>
+    <value name="COLOUR">
+      <block type="colour_hue" id="8zzrtV6r4`a;:cl}8GUi">
+        <mutation colour="#a55b5b"/>
+        <field name="HUE">0</field>
+      </block>
+    </value>
+  </block><block type="factory_base" id="q;N[v?,a*h6SZ+Rxm35~" deletable="false" movable="false" x="10" y="10">
+    <mutation connections="BOTH"/>
+    <field name="NAME">sipeed_ov2640_init_custom_size</field>
+    <field name="INLINE">AUTO</field>
+    <field name="CONNECTIONS">BOTH</field>
+    <statement name="INPUTS">
+      <block type="input_dummy" id="|dzCRYBUkK}^/{LbND:~">
+        <field name="ALIGN">LEFT</field>
+        <statement name="FIELDS">
+          <block type="field_static" id="$OpS?jo_Yj=T5nQNYeG;">
+            <field name="TEXT">OV2640 init, frame size width</field>
+            <next>
+              <block type="field_number" id="1LQSI9:PwU~.La@/{U_,">
+                <field name="VALUE">320</field>
+                <field name="FIELDNAME">width</field>
+                <field name="MIN">-Infinity</field>
+                <field name="MAX">Infinity</field>
+                <field name="PRECISION">0</field>
+                <next>
+                  <block type="field_static" id="p72zq#`;+;mN}x60^doS">
+                    <field name="TEXT">, height</field>
+                    <next>
+                      <block type="field_number" id="dLOa^#Ov~U9bYf,(07r@">
+                        <field name="VALUE">240</field>
+                        <field name="FIELDNAME">height</field>
+                        <field name="MIN">-Infinity</field>
+                        <field name="MAX">Infinity</field>
+                        <field name="PRECISION">0</field>
+                        <next>
+                          <block type="field_static" id="HMLg{|5Zc:8VdtuK^|u0">
+                            <field name="TEXT">format</field>
+                            <next>
+                              <block type="field_dropdown" id="YO?f=,i*2h[A/0+Bkl(@">
+                                <mutation options="[&quot;text&quot;,&quot;text&quot;,&quot;text&quot;,&quot;text&quot;,&quot;text&quot;]"/>
+                                <field name="FIELDNAME">pix_format</field>
+                                <field name="USER0">RGB565</field>
+                                <field name="CPU0">PIXFORMAT_RGB565</field>
+                                <field name="USER1">RAW</field>
+                                <field name="CPU1">PIXFORMAT_BAYER</field>
+                                <field name="USER2">YUV422</field>
+                                <field name="CPU2">PIXFORMAT_YUV422</field>
+                                <field name="USER3">GRAYSCALE</field>
+                                <field name="CPU3">PIXFORMAT_GRAYSCALE</field>
+                                <field name="USER4">JPEG/COMPRESSED</field>
+                                <field name="CPU4">PIXFORMAT_JPEG</field>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </statement>
+      </block>
+    </statement>
+    <value name="TOOLTIP">
+      <block type="text" id="]_ZPi}oWlA?,})N,.znX" deletable="false" movable="false">
+        <field name="TEXT">initial camera with custom image size</field>
+      </block>
+    </value>
+    <value name="HELPURL">
+      <block type="text" id="Dk8mik+Q}t0dS/rQDnOe" deletable="false" movable="false">
+        <field name="TEXT"/>
+      </block>
+    </value>
+    <value name="TOPTYPE">
+      <shadow type="type_null" id="zGF)nNb2K_P[;W-HY2m8"/>
+    </value>
+    <value name="BOTTOMTYPE">
+      <shadow type="type_null" id="@$w^[T_B4QV6z:bXM+tt"/>
+    </value>
+    <value name="COLOUR">
+      <block type="colour_hue" id="8zzrtV6r4`a;:cl}8GUi">
+        <mutation colour="#a55b5b"/>
+        <field name="HUE">0</field>
+      </block>
+    </value>
+  </block><block type="factory_base" id="q;N[v?,a*h6SZ+Rxm35~" deletable="false" movable="false" x="10" y="10">
+    <mutation connections="BOTH"/>
+    <field name="NAME">sipeed_ov2640_set_pixel_format</field>
+    <field name="INLINE">AUTO</field>
+    <field name="CONNECTIONS">BOTH</field>
+    <statement name="INPUTS">
+      <block type="input_dummy" id="|dzCRYBUkK}^/{LbND:~">
+        <field name="ALIGN">LEFT</field>
+        <statement name="FIELDS">
+          <block type="field_static" id="$OpS?jo_Yj=T5nQNYeG;">
+            <field name="TEXT">OV2640 set pixel format</field>
+            <next>
+              <block type="field_dropdown" id="YO?f=,i*2h[A/0+Bkl(@">
+                <mutation options="[&quot;text&quot;,&quot;text&quot;,&quot;text&quot;,&quot;text&quot;,&quot;text&quot;]"/>
+                <field name="FIELDNAME">pix_format</field>
+                <field name="USER0">RGB565</field>
+                <field name="CPU0">PIXFORMAT_RGB565</field>
+                <field name="USER1">RAW</field>
+                <field name="CPU1">PIXFORMAT_BAYER</field>
+                <field name="USER2">YUV422</field>
+                <field name="CPU2">PIXFORMAT_YUV422</field>
+                <field name="USER3">GRAYSCALE</field>
+                <field name="CPU3">PIXFORMAT_GRAYSCALE</field>
+                <field name="USER4">JPEG/COMPRESSED</field>
+                <field name="CPU4">PIXFORMAT_JPEG</field>
+              </block>
+            </next>
+          </block>
+        </statement>
+      </block>
+    </statement>
+    <value name="TOOLTIP">
+      <block type="text" id="]_ZPi}oWlA?,})N,.znX" deletable="false" movable="false">
+        <field name="TEXT">set camera pixel format</field>
+      </block>
+    </value>
+    <value name="HELPURL">
+      <block type="text" id="Dk8mik+Q}t0dS/rQDnOe" deletable="false" movable="false">
+        <field name="TEXT"/>
+      </block>
+    </value>
+    <value name="TOPTYPE">
+      <shadow type="type_null" id="zGF)nNb2K_P[;W-HY2m8"/>
+    </value>
+    <value name="BOTTOMTYPE">
+      <shadow type="type_null" id="@$w^[T_B4QV6z:bXM+tt"/>
+    </value>
+    <value name="COLOUR">
+      <block type="colour_hue" id="8zzrtV6r4`a;:cl}8GUi">
+        <mutation colour="#a55b5b"/>
+        <field name="HUE">0</field>
+      </block>
+    </value>
+  </block><block type="factory_base" id="q;N[v?,a*h6SZ+Rxm35~" deletable="false" movable="false" x="10" y="10">
+    <mutation connections="BOTH"/>
+    <field name="NAME">sipeed_ov2640_set_frame_size</field>
+    <field name="INLINE">AUTO</field>
+    <field name="CONNECTIONS">BOTH</field>
+    <statement name="INPUTS">
+      <block type="input_dummy" id="|dzCRYBUkK}^/{LbND:~">
+        <field name="ALIGN">LEFT</field>
+        <statement name="FIELDS">
+          <block type="field_static" id="$OpS?jo_Yj=T5nQNYeG;">
+            <field name="TEXT">OV2640 set frame size</field>
+            <next>
+              <block type="field_dropdown" id="jc0#ST(c8o5f-pVkZyg_">
+                <mutation options="[&quot;text&quot;,&quot;text&quot;,&quot;text&quot;,&quot;text&quot;,&quot;text&quot;]"/>
+                <field name="FIELDNAME">img_size</field>
+                <field name="USER0">640x480</field>
+                <field name="CPU0">FRAMESIZE_VGA</field>
+                <field name="USER1">320x240</field>
+                <field name="CPU1">FRAMESIZE_QVGA</field>
+                <field name="USER2">160x120</field>
+                <field name="CPU2">FRAMESIZE_QQVGA</field>
+                <field name="USER3">80x60</field>
+                <field name="CPU3">FRAMESIZE_QQQVGA</field>
+                <field name="USER4">40x30</field>
+                <field name="CPU4">FRAMESIZE_QQQQVGA</field>
+              </block>
+            </next>
+          </block>
+        </statement>
+      </block>
+    </statement>
+    <value name="TOOLTIP">
+      <block type="text" id="]_ZPi}oWlA?,})N,.znX" deletable="false" movable="false">
+        <field name="TEXT">set camera frame size</field>
+      </block>
+    </value>
+    <value name="HELPURL">
+      <block type="text" id="Dk8mik+Q}t0dS/rQDnOe" deletable="false" movable="false">
+        <field name="TEXT"/>
+      </block>
+    </value>
+    <value name="TOPTYPE">
+      <shadow type="type_null" id="zGF)nNb2K_P[;W-HY2m8"/>
+    </value>
+    <value name="BOTTOMTYPE">
+      <shadow type="type_null" id="@$w^[T_B4QV6z:bXM+tt"/>
+    </value>
+    <value name="COLOUR">
+      <block type="colour_hue" id="8zzrtV6r4`a;:cl}8GUi">
+        <mutation colour="#a55b5b"/>
+        <field name="HUE">0</field>
+      </block>
+    </value>
+  </block><block type="factory_base" id="q;N[v?,a*h6SZ+Rxm35~" deletable="false" movable="false" x="10" y="10">
+    <mutation connections="BOTH"/>
+    <field name="NAME">sipeed_ov2640_set_invert</field>
+    <field name="INLINE">AUTO</field>
+    <field name="CONNECTIONS">BOTH</field>
+    <statement name="INPUTS">
+      <block type="input_dummy" id="|dzCRYBUkK}^/{LbND:~">
+        <field name="ALIGN">LEFT</field>
+        <statement name="FIELDS">
+          <block type="field_static" id="$OpS?jo_Yj=T5nQNYeG;">
+            <field name="TEXT">OV2640 set invert</field>
+            <next>
+              <block type="field_dropdown" id="jc0#ST(c8o5f-pVkZyg_">
+                <mutation options="[&quot;text&quot;,&quot;text&quot;]"/>
+                <field name="FIELDNAME">invert</field>
+                <field name="USER0">true</field>
+                <field name="CPU0">true</field>
+                <field name="USER1">false</field>
+                <field name="CPU1">false</field>
+              </block>
+            </next>
+          </block>
+        </statement>
+      </block>
+    </statement>
+    <value name="TOOLTIP">
+      <block type="text" id="]_ZPi}oWlA?,})N,.znX" deletable="false" movable="false">
+        <field name="TEXT">set camera invert</field>
+      </block>
+    </value>
+    <value name="HELPURL">
+      <block type="text" id="Dk8mik+Q}t0dS/rQDnOe" deletable="false" movable="false">
+        <field name="TEXT"/>
+      </block>
+    </value>
+    <value name="TOPTYPE">
+      <shadow type="type_null" id="zGF)nNb2K_P[;W-HY2m8"/>
+    </value>
+    <value name="BOTTOMTYPE">
+      <shadow type="type_null" id="@$w^[T_B4QV6z:bXM+tt"/>
+    </value>
+    <value name="COLOUR">
+      <block type="colour_hue" id="8zzrtV6r4`a;:cl}8GUi">
+        <mutation colour="#a55b5b"/>
+        <field name="HUE">0</field>
+      </block>
+    </value>
+  </block><block type="factory_base" id="q;N[v?,a*h6SZ+Rxm35~" deletable="false" movable="false" x="10" y="10">
+    <mutation connections="LEFT"/>
+    <field name="NAME">sipeed_ov2640_snapshot</field>
+    <field name="INLINE">AUTO</field>
+    <field name="CONNECTIONS">LEFT</field>
+    <statement name="INPUTS">
+      <block type="input_dummy" id="|dzCRYBUkK}^/{LbND:~">
+        <field name="ALIGN">LEFT</field>
+        <statement name="FIELDS">
+          <block type="field_static" id="$OpS?jo_Yj=T5nQNYeG;">
+            <field name="TEXT">OV2640 snapshot</field>
+          </block>
+        </statement>
+      </block>
+    </statement>
+    <value name="TOOLTIP">
+      <block type="text" id="]_ZPi}oWlA?,})N,.znX" deletable="false" movable="false">
+        <field name="TEXT">get camera image</field>
+      </block>
+    </value>
+    <value name="HELPURL">
+      <block type="text" id="Dk8mik+Q}t0dS/rQDnOe" deletable="false" movable="false">
+        <field name="TEXT"/>
+      </block>
+    </value>
+    <value name="OUTPUTTYPE">
+      <shadow type="type_null" id="xJ2LHI%^](`eMq#|{Z/{"/>
+      <block type="type_other" id="(Vv(4+_A{uujUPB-VzsV">
+        <field name="TYPE">uint16_t *</field>
+      </block>
+    </value>
+    <value name="COLOUR">
+      <block type="colour_hue" id="8zzrtV6r4`a;:cl}8GUi">
+        <mutation colour="#a55b5b"/>
+        <field name="HUE">0</field>
+      </block>
+    </value>
+  </block><block type="factory_base" id="q;N[v?,a*h6SZ+Rxm35~" deletable="false" movable="false" x="10" y="10">
+    <mutation connections="LEFT"/>
+    <field name="NAME">sipeed_ov2640_get_rgb888</field>
+    <field name="INLINE">AUTO</field>
+    <field name="CONNECTIONS">LEFT</field>
+    <statement name="INPUTS">
+      <block type="input_dummy" id="|dzCRYBUkK}^/{LbND:~">
+        <field name="ALIGN">LEFT</field>
+        <statement name="FIELDS">
+          <block type="field_static" id="$OpS?jo_Yj=T5nQNYeG;">
+            <field name="TEXT">OV2640 get RGB888</field>
+          </block>
+        </statement>
+      </block>
+    </statement>
+    <value name="TOOLTIP">
+      <block type="text" id="]_ZPi}oWlA?,})N,.znX" deletable="false" movable="false">
+        <field name="TEXT">get RGB888 from camera (use after snapshot)</field>
+      </block>
+    </value>
+    <value name="HELPURL">
+      <block type="text" id="Dk8mik+Q}t0dS/rQDnOe" deletable="false" movable="false">
+        <field name="TEXT"/>
+      </block>
+    </value>
+    <value name="OUTPUTTYPE">
+      <shadow type="type_null" id="ZF7w4eG*~D}-6ZT(wIAn"/>
+      <block type="type_other" id="(Vv(4+_A{uujUPB-VzsV">
+        <field name="TYPE">uint8_t *</field>
+      </block>
+    </value>
+    <value name="COLOUR">
+      <block type="colour_hue" id="8zzrtV6r4`a;:cl}8GUi">
+        <mutation colour="#a55b5b"/>
+        <field name="HUE">0</field>
+      </block>
+    </value>
+  </block><block type="factory_base" id="q;N[v?,a*h6SZ+Rxm35~" deletable="false" movable="false" x="10" y="10">
+    <mutation connections="LEFT"/>
+    <field name="NAME">sipeed_ov2640_get_rgb565</field>
+    <field name="INLINE">AUTO</field>
+    <field name="CONNECTIONS">LEFT</field>
+    <statement name="INPUTS">
+      <block type="input_dummy" id="|dzCRYBUkK}^/{LbND:~">
+        <field name="ALIGN">LEFT</field>
+        <statement name="FIELDS">
+          <block type="field_static" id="$OpS?jo_Yj=T5nQNYeG;">
+            <field name="TEXT">OV2640 get RGB565</field>
+          </block>
+        </statement>
+      </block>
+    </statement>
+    <value name="TOOLTIP">
+      <block type="text" id="]_ZPi}oWlA?,})N,.znX" deletable="false" movable="false">
+        <field name="TEXT">get RGB565 from camera (use after snapshot)</field>
+      </block>
+    </value>
+    <value name="HELPURL">
+      <block type="text" id="Dk8mik+Q}t0dS/rQDnOe" deletable="false" movable="false">
+        <field name="TEXT"/>
+      </block>
+    </value>
+    <value name="OUTPUTTYPE">
+      <shadow type="type_null" id="d`6$iqU9J8!47TBI^vHu"/>
+      <block type="type_other" id="(Vv(4+_A{uujUPB-VzsV">
+        <field name="TYPE">uint16_t *</field>
+      </block>
+    </value>
+    <value name="COLOUR">
+      <block type="colour_hue" id="8zzrtV6r4`a;:cl}8GUi">
+        <mutation colour="#a55b5b"/>
+        <field name="HUE">0</field>
+      </block>
+    </value>
+  </block></xml>
