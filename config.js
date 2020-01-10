@@ -8,5 +8,5 @@ module.exports = {
   email: "comdet@kbide.org",
   git: "https://github.com/comdet/kbide-sipeed-m1-dock-suit/",
   image: "/static/display.png",
-  version: "1.1.0"
+  version: "1.1.1"
 };
