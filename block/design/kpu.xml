@@ -96,20 +96,31 @@
         <field name="ALIGN">LEFT</field>
         <statement name="FIELDS">
           <block type="field_static" id="-mKKZa$AqpS58:|M(.qx">
-            <field name="TEXT">KPU forward</field>
+            <field name="TEXT">KPU forward (sort output</field>
+            <next>
+              <block type="field_checkbox" id="M{JHDO|TPb)4v]S72yj8">
+                <field name="CHECKED">TRUE</field>
+                <field name="FIELDNAME">sort_output</field>
+                <next>
+                  <block type="field_static" id="m=a0S;b/PNi7]JP2a8o2">
+                    <field name="TEXT">)</field>
+                  </block>
+                </next>
+              </block>
+            </next>
           </block>
         </statement>
         <value name="TYPE">
           <shadow type="type_null" id="_$krbZB?D50h*0@qX~Sn"/>
-          <block type="type_other" id="uOqgf^+~rFzxo_UE=SIC">
-            <field name="TYPE">std::vector&lt;kpu_res_data&gt;</field>
+          <block type="type_other" id="zmLQG`7C0N5=MLmc}j.X">
+            <field name="TYPE">uint8_t *</field>
           </block>
         </value>
       </block>
     </statement>
     <value name="TOOLTIP">
       <block type="text" id="V?{;c,cnw]%%-;G9W*Gf" deletable="false" movable="false">
-        <field name="TEXT">init and load KPU model from pointer, output sorted best result first</field>
+        <field name="TEXT">init and load KPU model from pointer</field>
       </block>
     </value>
     <value name="HELPURL">
@@ -119,6 +130,19 @@
     </value>
     <value name="OUTPUTTYPE">
       <shadow type="type_null" id="JlF:(B}kmDr8Y(o/c`Ut"/>
+      <block type="type_group" id="w/QE!0@PF;!WCf8l@vqB">
+        <mutation types="2"/>
+        <value name="TYPE0">
+          <block type="type_other" id="uOqgf^+~rFzxo_UE=SIC">
+            <field name="TYPE">std::vector&lt;kpu_res_data&gt;</field>
+          </block>
+        </value>
+        <value name="TYPE1">
+          <block type="type_other" id="Wy#?%nO7WOPH|W;8_vW%">
+            <field name="TYPE">float *</field>
+          </block>
+        </value>
+      </block>
     </value>
     <value name="COLOUR">
       <block type="colour_hue" id="264o(K@=;.;AUi_6wKLv">
@@ -359,6 +383,353 @@
     </value>
     <value name="COLOUR">
       <block type="colour_hue" id="264o(K@=;.;AUi_6wKLv">
+        <mutation colour="#a5935b"/>
+        <field name="HUE">45</field>
+      </block>
+    </value>
+  </block><block type="factory_base" id="R9DM|fh7v?{N}PV@4U{a" deletable="false" movable="false" x="10" y="10">
+    <mutation connections="BOTH"/>
+    <field name="NAME">k210_kpu_object_detection_init</field>
+    <field name="INLINE">AUTO</field>
+    <field name="CONNECTIONS">BOTH</field>
+    <statement name="INPUTS">
+      <block type="input_dummy" id="EOnv~fV/3u]g$E05c;Lp">
+        <field name="ALIGN">LEFT</field>
+        <statement name="FIELDS">
+          <block type="field_static" id="g5gf|KD;T-U/OOEvN3dV">
+            <field name="TEXT">KPU Yolo object detection Init</field>
+          </block>
+        </statement>
+        <next>
+          <block type="input_value" id="=!wI@T3vv~zQ]Y-[q{Wr">
+            <field name="INPUTNAME">region_layer_width</field>
+            <field name="ALIGN">LEFT</field>
+            <statement name="FIELDS">
+              <block type="field_static" id="nB%6ba-Ot?Du:y~l/^*)">
+                <field name="TEXT">region layer width</field>
+              </block>
+            </statement>
+            <value name="TYPE">
+              <shadow type="type_null"/>
+              <block type="type_number" id="nfw[Wc6ofQHI]Y?:WWDn"/>
+            </value>
+            <next>
+              <block type="input_value" id="imU3W0fU1#y*ByKiJS}!">
+                <field name="INPUTNAME">region_layer_height</field>
+                <field name="ALIGN">LEFT</field>
+                <statement name="FIELDS">
+                  <block type="field_static" id="^]T)xNL3)o1o24=v^gPz">
+                    <field name="TEXT">region layer height</field>
+                  </block>
+                </statement>
+                <value name="TYPE">
+                  <shadow type="type_null"/>
+                  <block type="type_number" id="-^%_#-.cOb14!,^E/Y6f"/>
+                </value>
+                <next>
+                  <block type="input_value" id="f1hk$wX38D~a=k;|(B2x">
+                    <field name="INPUTNAME">region_layer_channels</field>
+                    <field name="ALIGN">LEFT</field>
+                    <statement name="FIELDS">
+                      <block type="field_static" id="[=2E{o?tb2|gXu*~ncG^">
+                        <field name="TEXT">region layer channels</field>
+                      </block>
+                    </statement>
+                    <value name="TYPE">
+                      <shadow type="type_null"/>
+                      <block type="type_number" id="Pr]tPTJn!M5En6AGjRwP"/>
+                    </value>
+                    <next>
+                      <block type="input_value" id="K:N_iCrF{B$,~6m1}5%i">
+                        <field name="INPUTNAME">input width</field>
+                        <field name="ALIGN">LEFT</field>
+                        <statement name="FIELDS">
+                          <block type="field_static" id="jc{!Cv|uKS/YQPWyJN8l">
+                            <field name="TEXT">image input width</field>
+                          </block>
+                        </statement>
+                        <value name="TYPE">
+                          <shadow type="type_null"/>
+                          <block type="type_number" id="C-Lu-FJ%k9}Q48)5cy.("/>
+                        </value>
+                        <next>
+                          <block type="input_value" id="UTvlgU]qCGj2O*V{!7ih">
+                            <field name="INPUTNAME">input height</field>
+                            <field name="ALIGN">LEFT</field>
+                            <statement name="FIELDS">
+                              <block type="field_static" id="0_misXrn2x*rwgX/*GQt">
+                                <field name="TEXT">image input height</field>
+                              </block>
+                            </statement>
+                            <value name="TYPE">
+                              <shadow type="type_null"/>
+                              <block type="type_number" id="XgG)*DMhQ3NiP-:l;[9_"/>
+                            </value>
+                            <next>
+                              <block type="input_value" id="Z.tF/FZTVCDGY^~Iyi!:">
+                                <field name="INPUTNAME">threshold</field>
+                                <field name="ALIGN">LEFT</field>
+                                <statement name="FIELDS">
+                                  <block type="field_static" id="kc,3J`;,My1U-la~JHj@">
+                                    <field name="TEXT">threshold</field>
+                                  </block>
+                                </statement>
+                                <value name="TYPE">
+                                  <shadow type="type_null" id="DG)xc~jG`x={a14r9em?"/>
+                                  <block type="type_number" id="k6}.wGlCz%rhU}895`|d"/>
+                                </value>
+                                <next>
+                                  <block type="input_value" id="?O#hy;zL9fTM`Hf1frJ,">
+                                    <field name="INPUTNAME">nms</field>
+                                    <field name="ALIGN">LEFT</field>
+                                    <statement name="FIELDS">
+                                      <block type="field_static" id="g`+t,]l9%*yA6:39d21f">
+                                        <field name="TEXT">nms</field>
+                                      </block>
+                                    </statement>
+                                    <value name="TYPE">
+                                      <shadow type="type_null"/>
+                                      <block type="type_number" id="MS;BXC,Is84yCcPta74,"/>
+                                    </value>
+                                    <next>
+                                      <block type="input_value" id="pQCkz]9)_.(t],Cs[2C1">
+                                        <field name="INPUTNAME">anchor_number</field>
+                                        <field name="ALIGN">LEFT</field>
+                                        <statement name="FIELDS">
+                                          <block type="field_static" id="2H)tzF2X0D[!BqDyS=,.">
+                                            <field name="TEXT">number of anchor</field>
+                                          </block>
+                                        </statement>
+                                        <value name="TYPE">
+                                          <shadow type="type_null"/>
+                                          <block type="type_number" id="UoZ|]Xgkw=dy(/d68qSh"/>
+                                        </value>
+                                        <next>
+                                          <block type="input_value" id="}z$|{JssJq+q.=_*TjH2">
+                                            <field name="INPUTNAME">array_anchor</field>
+                                            <field name="ALIGN">LEFT</field>
+                                            <statement name="FIELDS">
+                                              <block type="field_static" id="vcW6%yQ*8uj}LuX.My#G">
+                                                <field name="TEXT">anchor</field>
+                                              </block>
+                                            </statement>
+                                            <value name="TYPE">
+                                              <shadow type="type_null" id="Wi/:Vi3$X,xMNqU86d`s"/>
+                                              <block type="type_string" id="t}wabR5/`,9`ypUh)ejf"/>
+                                            </value>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <value name="TOOLTIP">
+      <block type="text" id="Qz^jJB.|%2L(onS_DsAB" deletable="false" movable="false">
+        <field name="TEXT">Config yolo object detection</field>
+      </block>
+    </value>
+    <value name="HELPURL">
+      <block type="text" id="wQ.GPE!%Ig_Zs@tg.XS(" deletable="false" movable="false">
+        <field name="TEXT"/>
+      </block>
+    </value>
+    <value name="TOPTYPE">
+      <shadow type="type_null" id="w^/VeY:}-:ZjcodXi3Br"/>
+    </value>
+    <value name="BOTTOMTYPE">
+      <shadow type="type_null" id="gLnmAK;IG06Fyd1|`RIF"/>
+    </value>
+    <value name="COLOUR">
+      <block type="colour_hue" id="#|M$i/)Z1AX:w{YNNDsu">
+        <mutation colour="#a5935b"/>
+        <field name="HUE">45</field>
+      </block>
+    </value>
+  </block><block type="factory_base" id="abY9Z?Y{cn0Jrk4dK$7|" deletable="false" movable="false" x="10" y="10">
+    <mutation connections="LEFT"/>
+    <field name="NAME">k210_kpu_object_detection_get_output</field>
+    <field name="INLINE">AUTO</field>
+    <field name="CONNECTIONS">LEFT</field>
+    <statement name="INPUTS">
+      <block type="input_value" id="+3N-{.xnqtHoz}gZ)^H9">
+        <field name="INPUTNAME">kpu_result</field>
+        <field name="ALIGN">LEFT</field>
+        <statement name="FIELDS">
+          <block type="field_static" id="Bz9AhAs*s-Xi|Fu^xpy6">
+            <field name="TEXT">KPU get object detection output</field>
+          </block>
+        </statement>
+        <value name="TYPE">
+          <shadow type="type_null" id="MJ+SfBFADt|Cqd[j)`pJ"/>
+          <block type="type_other" id="EAC:++^0r^HbSE5q)xDX">
+            <field name="TYPE">float *</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+    <value name="TOOLTIP">
+      <block type="text" id=")lV^BAjkehdBnpARGb1x" deletable="false" movable="false">
+        <field name="TEXT">get object result from kpu forward</field>
+      </block>
+    </value>
+    <value name="HELPURL">
+      <block type="text" id="5I|U)H})mD1N(1Qk728t" deletable="false" movable="false">
+        <field name="TEXT"/>
+      </block>
+    </value>
+    <value name="OUTPUTTYPE">
+      <shadow type="type_null" id="jD(1BPOQz[eEOPCUR)!v"/>
+      <block type="type_other" id="/1MYw8.W1oZ@s(;qD}jP">
+        <field name="TYPE">obj_info_t</field>
+      </block>
+    </value>
+    <value name="COLOUR">
+      <block type="colour_hue" id="O*`MBAw^_p*Ih5Uu]ddL">
+        <mutation colour="#a5935b"/>
+        <field name="HUE">45</field>
+      </block>
+    </value>
+  </block><block type="factory_base" id="=(aYx@Y~8ICUn.I1;cCi" deletable="false" movable="false" x="10" y="10">
+    <mutation connections="LEFT"/>
+    <field name="NAME">k210_kpu_object_detection_get_object_count</field>
+    <field name="INLINE">AUTO</field>
+    <field name="CONNECTIONS">LEFT</field>
+    <statement name="INPUTS">
+      <block type="input_value" id="P[p.Wtq!7k%v)x;NZV+O">
+        <field name="INPUTNAME">object_output</field>
+        <field name="ALIGN">LEFT</field>
+        <statement name="FIELDS">
+          <block type="field_static" id="{K6?96yxwBRh[oIRWFDI">
+            <field name="TEXT">KPU get object count</field>
+          </block>
+        </statement>
+        <value name="TYPE">
+          <shadow type="type_null" id="O.*O@k+tD{%}!`2~`jF9"/>
+          <block type="type_other" id="EDRWCj,icXi((;1#N|l!">
+            <field name="TYPE">obj_info_t</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+    <value name="TOOLTIP">
+      <block type="text" id="cx+)E0dU25@rkZB1?6ar" deletable="false" movable="false">
+        <field name="TEXT">get object count from object detection output</field>
+      </block>
+    </value>
+    <value name="HELPURL">
+      <block type="text" id="XKyY`DU8I~o-KrQ{P_tY" deletable="false" movable="false">
+        <field name="TEXT"/>
+      </block>
+    </value>
+    <value name="OUTPUTTYPE">
+      <shadow type="type_null" id="(ND?}(g.)e+m2@Z6ktc("/>
+      <block type="type_number" id="9X-$_]L1^1B|aQyZ!!d?"/>
+    </value>
+    <value name="COLOUR">
+      <block type="colour_hue" id="1Ih!OrgE*Ss^mX4,Blzg">
+        <mutation colour="#a5935b"/>
+        <field name="HUE">45</field>
+      </block>
+    </value>
+  </block><block type="factory_base" id="=(aYx@Y~8ICUn.I1;cCi" deletable="false" movable="false" x="10" y="10">
+    <mutation connections="LEFT"/>
+    <field name="NAME">k210_kpu_object_detection_get_object_info</field>
+    <field name="INLINE">INT</field>
+    <field name="CONNECTIONS">LEFT</field>
+    <statement name="INPUTS">
+      <block type="input_dummy" id=")FXmgXP%T9tJk!DtO[3v">
+        <field name="ALIGN">LEFT</field>
+        <statement name="FIELDS">
+          <block type="field_static" id="{K6?96yxwBRh[oIRWFDI">
+            <field name="TEXT">KPU get object</field>
+            <next>
+              <block type="field_dropdown" id="dveUGXNB@?2%h9t:XQ-U">
+                <mutation options="[&quot;text&quot;,&quot;text&quot;,&quot;text&quot;,&quot;text&quot;,&quot;text&quot;,&quot;text&quot;,&quot;text&quot;,&quot;text&quot;]"/>
+                <field name="FIELDNAME">info</field>
+                <field name="USER0">X1</field>
+                <field name="CPU0">x1</field>
+                <field name="USER1">Y1</field>
+                <field name="CPU1">y1</field>
+                <field name="USER2">X2</field>
+                <field name="CPU2">x2</field>
+                <field name="USER3">Y2</field>
+                <field name="CPU3">Y2</field>
+                <field name="USER4">width</field>
+                <field name="CPU4">width</field>
+                <field name="USER5">height</field>
+                <field name="CPU5">height</field>
+                <field name="USER6">class id</field>
+                <field name="CPU6">class_id</field>
+                <field name="USER7">probability</field>
+                <field name="CPU7">prob</field>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <next>
+          <block type="input_value" id="P[p.Wtq!7k%v)x;NZV+O">
+            <field name="INPUTNAME">object_output</field>
+            <field name="ALIGN">LEFT</field>
+            <statement name="FIELDS">
+              <block type="field_static" id="h|iV-9|/rR]n,(}]FSZ%">
+                <field name="TEXT">from</field>
+              </block>
+            </statement>
+            <value name="TYPE">
+              <shadow type="type_null" id="O.*O@k+tD{%}!`2~`jF9"/>
+              <block type="type_other" id="EDRWCj,icXi((;1#N|l!">
+                <field name="TYPE">obj_info_t</field>
+              </block>
+            </value>
+            <next>
+              <block type="input_value" id="u8T{r6v,:;bCPzd94#pL">
+                <field name="INPUTNAME">index</field>
+                <field name="ALIGN">LEFT</field>
+                <statement name="FIELDS">
+                  <block type="field_static" id="]v|E=kjZRhHN+%VBl!9e">
+                    <field name="TEXT">index</field>
+                  </block>
+                </statement>
+                <value name="TYPE">
+                  <shadow type="type_null" id="U[j8M[Fsk2IITO8)6UzW"/>
+                  <block type="type_number" id=",LIXnK6K-;8)tT24AR#w"/>
+                </value>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <value name="TOOLTIP">
+      <block type="text" id="cx+)E0dU25@rkZB1?6ar" deletable="false" movable="false">
+        <field name="TEXT">get object info from object result</field>
+      </block>
+    </value>
+    <value name="HELPURL">
+      <block type="text" id="XKyY`DU8I~o-KrQ{P_tY" deletable="false" movable="false">
+        <field name="TEXT"/>
+      </block>
+    </value>
+    <value name="OUTPUTTYPE">
+      <shadow type="type_null" id="G=?[KeRCkCwU@:81hj2Q"/>
+      <block type="type_number" id="9X-$_]L1^1B|aQyZ!!d?"/>
+    </value>
+    <value name="COLOUR">
+      <block type="colour_hue" id="1Ih!OrgE*Ss^mX4,Blzg">
         <mutation colour="#a5935b"/>
         <field name="HUE">45</field>
       </block>
